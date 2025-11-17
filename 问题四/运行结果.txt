@@ -1,0 +1,114 @@
+E:\Preprocessing\Finance\.venv\Scripts\python.exe E:\Preprocessing\Finance\Question4.py
+开始稳定币与货币主权关系分析...
+数据文件未找到: [Errno 2] No such file or directory: 'my_global_data.csv'
+使用模拟数据进行演示
+============================================================
+模型1：全球层面稳定币普及与美元国际地位关系
+============================================================
+                            OLS Regression Results
+==============================================================================
+Dep. Variable:      usd_reserve_share   R-squared:                       0.634
+Model:                            OLS   Adj. R-squared:                  0.488
+Method:                 Least Squares   F-statistic:                     4.339
+Date:                Fri, 07 Nov 2025   Prob (F-statistic):             0.0272
+Time:                        22:23:22   Log-Likelihood:                -19.895
+No. Observations:                  15   AIC:                             49.79
+Df Residuals:                      10   BIC:                             53.33
+Df Model:                           4
+Covariance Type:            nonrobust
+========================================================================================
+                           coef    std err          t      P>|t|      [0.025      0.975]
+----------------------------------------------------------------------------------------
+const                  171.7862     50.827      3.380      0.007      58.536     285.036
+stablecoin_gdp_ratio    -0.0753      0.108     -0.695      0.503      -0.317       0.166
+us_gdp_share            -4.1829      1.804     -2.319      0.043      -8.202      -0.164
+dxy_index               -0.0544      0.177     -0.308      0.765      -0.448       0.339
+global_inflation        -0.2911      0.607     -0.480      0.642      -1.643       1.061
+==============================================================================
+Omnibus:                        2.980   Durbin-Watson:                   3.048
+Prob(Omnibus):                  0.225   Jarque-Bera (JB):                1.080
+Skew:                           0.583   Prob(JB):                        0.583
+Kurtosis:                       3.607   Cond. No.                     1.53e+04
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 1.53e+04. This might indicate that there are
+strong multicollinearity or other numerical problems.
+
+============================================================
+模型2：国家层面稳定币对货币主权的影响
+============================================================
+                            OLS Regression Results
+==============================================================================
+Dep. Variable:      sovereignty_index   R-squared:                       0.279
+Model:                            OLS   Adj. R-squared:                  0.237
+Method:                 Least Squares   F-statistic:                     6.637
+Date:                Fri, 07 Nov 2025   Prob (F-statistic):           5.89e-06
+Time:                        22:24:27   Log-Likelihood:                -327.29
+No. Observations:                 110   AIC:                             668.6
+Df Residuals:                     103   BIC:                             687.5
+Df Model:                           6
+Covariance Type:            nonrobust
+=========================================================================================
+                            coef    std err          t      P>|t|      [0.025      0.975]
+-----------------------------------------------------------------------------------------
+Intercept                76.3253      5.704     13.381      0.000      65.013      87.638
+stablecoin_adoption     -64.3318     19.098     -3.369      0.001    -102.208     -26.456
+foreign_deposit_ratio    -0.1000      0.095     -1.053      0.295      -0.288       0.088
+capital_control          -1.9253      4.385     -0.439      0.662     -10.622       6.771
+gdp_per_capita           -0.0005      0.000     -1.034      0.304      -0.001       0.000
+inflation                -0.4095      0.139     -2.952      0.004      -0.685      -0.134
+trade_openness            0.0137      0.044      0.312      0.756      -0.073       0.100
+==============================================================================
+Omnibus:                        0.015   Durbin-Watson:                   2.119
+Prob(Omnibus):                  0.993   Jarque-Bera (JB):                0.138
+Skew:                           0.000   Prob(JB):                        0.934
+Kurtosis:                       2.827   Cond. No.                     2.22e+05
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 2.22e+05. This might indicate that there are
+strong multicollinearity or other numerical problems.
+
+============================================================
+模型3：货币主权风险评估与预测
+============================================================
+动态阈值 - 主权指数: 55.77, 外币存款: 39.23
+类别分布: {1: 5, 0: 5}
+高风险国家预测结果:
+--------------------------------------------------
+     country  risk_probability   msvi
+7     Turkey             0.889  2.205
+0  Argentina             0.835  1.746
+8    Ukraine             0.730  1.119
+1     Brazil             0.703  0.985
+4    Nigeria             0.680  0.877
+
+============================================================
+综合分析报告
+============================================================
+1. 全球层面分析结果:
+   • 稳定币普及系数: -0.0753
+   • 显著性水平(p值): 0.5027
+   • 结论: 关系不显著
+
+2. 国家层面分析结果:
+   • 稳定币对货币主权影响系数: -64.3318
+   • 显著性水平(p值): 0.0011
+   • 结论: 稳定币普及显著削弱货币主权
+
+3. 高风险国家识别:
+   • Turkey: 风险概率 88.9%
+   • Argentina: 风险概率 83.5%
+   • Ukraine: 风险概率 73.0%
+
+4. 政策建议:
+   • 对高风险国家: 加强资本流动管理，推动本币数字化
+   • 国际层面: 建立稳定币跨境监管合作框架
+   • 长期策略: 发展多边数字货币基础设施，减少美元依赖
+
+分析完成！结果已保存到CSV文件。
+
+进程已结束，退出代码为 0
