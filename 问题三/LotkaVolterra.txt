@@ -1,0 +1,56 @@
+E:\Preprocessing\Finance\.venv\Scripts\python.exe E:\Preprocessing\Finance\Question_3\LotkaVolterra.py
+E:\Preprocessing\Finance\Question_3\LotkaVolterra.py:14: FutureWarning: The 'delim_whitespace' keyword in pd.read_csv is deprecated and will be removed in a future version. Use ``sep='\s+'`` instead
+  df = pd.read_csv(csv_file_path, delim_whitespace=True, header=None)
+正在读取CSV文件...
+原始数据形状: (6, 1)
+原始数据前几行:
+                                                   0
+0  year,total_mcap,total_growth_rate,usd_mcap,usd...
+1  2026,44.16555971864141,,37.5407257608452,85.0,...
+2  2027,115.94501085392966,162.52358532884517,94....
+3  2028,16837.396046207545,14421.880607195513,130...
+4  2029,3700.876560368654,-78.01989957228429,2729...
+警告: 数据有1列，期望9列或6列
+读取CSV文件时出错: invalid literal for int() with base 10: 'year,total_mcap,total_growth_rate,usd_mcap,usd_share,usd_growth_rate,non_usd_mcap,non_usd_share,non_usd_growth_rate'
+创建示例数据...
+执行基本市场份额分析...
+生成分析图表...
+============================================================
+STABLECOIN MARKET SHARE ANALYSIS REPORT
+============================================================
+
+1. BASIC MARKET ANALYSIS
+   • Average USD Share: 75.6%
+   • Average Yearly Change: -3.75 percentage points
+   • Total Share Erosion/Gain: -15.00 percentage points
+
+2. GROWTH DYNAMICS
+   • USD Stablecoins Avg Growth: 3481.6%
+   • Non-USD Stablecoins Avg Growth: 4406.3%
+   • Growth Differential: +924.7%
+
+4. TREND ASSESSMENT: EROSION
+   • Latest yearly change: -3.75 percentage points
+   • Implication: Non-USD stablecoins are gaining ground
+
+============================================================
+
+分析完成！
+基本分析结果:
+     year  usd_growth_rate  ...  relative_share  hhi_index
+0  2027.0       150.958977  ...             1.0   6953.125
+1  2028.0     13750.950005  ...             1.0   6512.500
+2  2029.0       -79.083423  ...             1.0   6128.125
+3  2030.0       103.624240  ...             1.0   5800.000
+
+[4 rows x 9 columns]
+
+预测数据:
+   year  total_mcap  usd_mcap  non_usd_mcap  usd_share  non_usd_share
+0  2026       44.16     37.54          6.62     0.8500         0.1500
+1  2027      115.95     94.21         21.74     0.8125         0.1875
+2  2028    16837.40  13048.98       3788.42     0.7750         0.2250
+3  2029     3700.88   2729.40        971.48     0.7375         0.2625
+4  2030     7939.60   5557.72       2381.88     0.7000         0.3000
+
+进程已结束，退出代码为 0

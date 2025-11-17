@@ -1,0 +1,27 @@
+E:\Preprocessing\Finance\.venv\Scripts\python.exe E:\Preprocessing\Finance\Question_3\bass2.py
+检测到的文件编码: ascii (置信度: 1.00)
+开始预测...
+未来预测年份数量: 5
+警告: us_interest_rate 数组长度(10)与预测年份数(5)不匹配
+  已截取前5个值
+警告: crypto_mcap 数组长度(10)与预测年份数(5)不匹配
+  已截取前5个值
+模型实际使用的特征: ['const', 'us_interest_rate', 'log_crypto_mcap']
+数组长度检查: {'year': 5, 'us_interest_rate': 5, 'log_crypto_mcap': 5}
+预测数据形状: (5, 3)
+预测数据列名: ['const', 'us_interest_rate', 'log_crypto_mcap']
+回归系数: {'const': -5.631656575138316, 'us_interest_rate': 0.3167365787673153, 'log_crypto_mcap': 1.1149087808647995}
+警告：无历史数据或数据不完整，使用简化预测方法
+阶段2预测结果已保存至 future_predictions.csv
+
+预测结果:
+   year  total_mcap  ...  non_usd_share  non_usd_growth_rate
+0  2026       44.17  ...          15.00                  NaN
+1  2027      115.95  ...           7.00                 22.5
+2  2028    16837.40  ...           0.06                 20.0
+3  2029     3700.88  ...           0.31                 17.5
+4  2030     7939.60  ...           0.17                 15.0
+
+[5 rows x 9 columns]
+
+进程已结束，退出代码为 0
